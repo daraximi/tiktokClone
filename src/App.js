@@ -1,5 +1,5 @@
 import "./App.css";
-import Video from "./video";
+import Video from "./Video";
 
 function App() {
   return (
@@ -7,10 +7,10 @@ function App() {
     <div className="app">
       <div className="app__videos">
         <Video />
-        <Video />
       </div>
 
       {/**App cotainer */}
+
       {/**Videos */}
       {/**Videos */}
       {/**Videos */}

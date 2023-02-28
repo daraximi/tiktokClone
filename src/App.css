@@ -11,7 +11,7 @@ html{
 
 .app__videos{
   position: relative;
-  height: 800px;
+  height: 98vh;
   border-radius: 20px;
   overflow: scroll;
   width: 80%;
@@ -20,10 +20,10 @@ html{
   scroll-snap-type: y mandatory;
 }
 
-.app__videps::-webkit-scrollbar{
+.app__videos::-webkit-scrollbar{
   display: none;
 }
-.app__videos{
+.app__videos{ 
   -ms-overflow-style: none;
   scrollbar-width: none;
 }

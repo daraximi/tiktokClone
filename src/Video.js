@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Video.css";
+import VideoFooter from "./VideoFooter";
+import VideoSidebar from "./VideoSidebar";
 function Video() {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef(null);
+
   const handleVideoPress = () => {
     if (playing) {
       videoRef.current.pause();
       setPlaying(false);
     } else {
-      videoRed.current.play();
+      videoRef.current.play();
       setPlaying(true);
     }
   };
@@ -16,15 +19,20 @@ function Video() {
   return (
     <div className="video">
       <video
-        onClick={handleVideoPress}
-        className="video_player"
-        loop
+        autoPlay
+        muted
         ref={videoRef}
-        src=""
+        onClick={handleVideoPress}
+        className="video__player"
+        loop
+        type="video/mp4"
+        src="videoone.mp4"
       ></video>
 
-      {/**Videofooter */}
-      {/**VideoSidebar */}
+      {/**Video Footer */}
+      <VideoFooter />
+      {/**Video Sidebar */}
+      <VideoSidebar />
     </div>
   );
 }
